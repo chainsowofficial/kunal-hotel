@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>𝓚𝓾𝓷𝓪𝓵 𝓗𝓸𝓽𝓮𝓵</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #fafafa;
+      color: #333;
+    }
+    header {
+      background: #ff7043; 
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    header p {
+      margin: 5px 0 0 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+      background: white;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      border-radius: 6px;
+    }
+    h2, h3 {
+      color: #ff5722;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ffccbc;
+      padding-bottom: 5px;
+    }
+    
+    /* Grid layout for menu categories */
+    .menu-category {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 columns */
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    
+    .item {
+      background: #fff3e0;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 220px;
+    }
+    .item img.menu-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+    }
+    .item span {
+      font-size: 18px;
+      margin-bottom: 12px;
+      flex-grow: 0;
+    }
+    .item input[type="number"] {
+      width: 70px;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: center;
+    }
+    #bill {
+      background: #fff8e1;
+      padding: 20px 15px;
+      border-radius: 6px;
+      margin-bottom: 40px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+    #bill h3 {
+      margin-top: 0;
+    }
+    #orderSummary {
+      min-height: 60px;
+      margin-bottom: 10px;
+    }
+    #totalAmount {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .payment-buttons button {
+      background: #ff7043;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background 0.3s;
+    }
+    .payment-buttons button:hover {
+      background: #e64a19;
+    }
+    .contact {
+      background: #fff3e0;
+      padding: 20px 15px;
+      border-radius: 6px;
+      margin-bottom: 40px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #ff7043;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    
+    /* Responsive for smaller screens */
+    @media (max-width: 768px) {
+      .menu-category {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+      }
+      .item {
+        min-height: auto;
+      }
+    }
+    @media (max-width: 480px) {
+      .menu-category {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>𝓚𝓾𝓷𝓪𝓵 𝓗𝓸𝓽𝓮𝓵
+
+  </h1>
+  
+  <p>JANAKPURDHAM| 📞+977 982‑2010227  | ✉️ petesoncliver@gmail.com</p>
+</header>
+
+<div class="container">
+
+  <h2>🍽️ Menu</h2>
+
+  <div id="menuSection">
+  <!-- Main Dishes -->
+  <div class="menu-category">
+    <div class="item">
+      <img src="image/khanaset.jpg" alt="Dal Bhat Tarkari" class="menu-img"/>
+      <span>Dal Bhat Tarkari – Rs. 120</span>
+      <input type="number" min="0" value="0" data-name="Dal Bhat Tarkari" data-price="120" />
+    </div>
+    <div class="item">
+      <img src="image/aalu.jpg" alt="Aloo Tarkari" class="menu-img"/>
+      <span>Aloo Tarkari – Rs. 50</span>
+      <input type="number" min="0" value="0" data-name="Aloo Tarkari" data-price="50" />
+    </div>
+    <div class="item">
+      <img src="image/bhindi.jpg" alt="Bhindi Tarkari" class="menu-img"/>
+      <span>Bhindi Tarkari – Rs. 60</span>
+      <input type="number" min="0" value="0" data-name="Bhindi Tarkari" data-price="60" />
+    </div>
+    <div class="item">
+      <img src="image/panner.jpg" alt="Paneer Curry" class="menu-img"/>
+      <span>Paneer Curry – Rs. 120</span>
+      <input type="number" min="0" value="0" data-name="Paneer Curry" data-price="120" />
+    </div>
+    <div class="item">
+      <img src="image/chanamasala.jpg" alt="Chana Masala" class="menu-img"/>
+      <span>Chana Masala – Rs. 80</span>
+      <input type="number" min="0" value="0" data-name="Chana Masala" data-price="80"/>
+    </div>
+    <div class="item">
+      <img src="image/CHOLAbhatura.jpg" alt="chola bhatora" class="menu-img"/>
+      <span>Chola bhatora – Rs.120</span>
+      <input type="number" min="0" value="0" data-name="chola bhatura" data-price="120"/>
+    </div>
+    <div class="item">
+      <img src="image/samosa.jpg" alt="samosa" class="menu-img"/>
+      <span>samosa – Rs. 15</span>
+      <input type="number" min="0" value="0" data-name="samosa" data-price="15" />
+    </div>
+    <div class="item">
+      <img src="image/samosachat.jpg" alt="samosa chat" class="menu-img"/>
+      <span>samosa chat – Rs.60 </span>
+      <input type="number" min="0" value="0" data-name="samosa chhat" data-price="60" />
+    </div>
+    <div class="item">
+      <img src="image/litti.jpg" alt="litti" class="menu-img"/>
+      <span>litti – Rs. 10</span>
+      <input type="number" min="0" value="0" data-name="litti" data-price="10" />
+    </div>
+    <div class="item">
+      <img src="image/pakoda.jpg" alt="pakoda" class="menu-img"/>
+      <span>pakoda – Rs. 15</span>
+      <input type="number" min="0" value="0" data-name="pakoda" data-price="15" />
+    </div>
+    <div class="item">
+      <img src="image/aaloparatha.jpg" alt="aloo paratha " class="menu-img"/>
+      <span>aloo paratha – Rs.60 </span>
+      <input type="number" min="0" value="0" data-name="aalo paratha" data-price="60" />
+    </div>
+    <div class="item">
+      <img src="image/momo.jpg" alt="veg steam momo " class="menu-img"/>
+      <span>Veg steam momo– Rs.100 </span>
+      <input type="number" min="0" value="0" data-name="veg steam momo" data-price="100" />
+    </div>
+    <div class="item">
+      <img src="image/frymomo.jpg" alt="veg fry momo " class="menu-img"/>
+      <span>Veg fry momo – Rs.120 </span>
+      <input type="number" min="0" value="0" data-name="veg fry momo" data-price="120" />
+    </div>
+  <div class="item">
+      <img src="image/chowminw.jpg" alt="chowmine " class="menu-img"/>
+      <span>chowmine – Rs.40 </span>
+      <input type="number" min="0" value="0" data-name="chowmine" data-price="80" />
+    </div>
+    <div class="item">
+      <img src="image/roti tarkari.jpg" alt="roti tarkari " class="menu-img"/>
+      <span>roti tarkari  –Rs.70</span>
+      <input type="number" min="0" value="0" data-name="roti tarkari" data-price="70" />
+    </div>
+  </div>
+  <button id="proceedBtn" style="background:#ff7043; color:white; border:none; padding:10px 20px; font-size:16px; border-radius:6px; cursor:pointer; margin-bottom: 40px;">Proceed</button>
+  </div>
+  <!-- sweets -->
+  <div class="menu-category">
+    <div class="item">
+      <img src="image/laddu.jpg" alt="laddu" class="menu-img"/>
+      <span>laddu – Rs.500/kg</span>
+      <input type="number" min="0" value="0" data-name="laddu" data-price="500/kg" />
+    </div>
+    <div class="item">
+      <img src="image/jalebi.jpg" alt="jalebi" class="menu-img"/>
+      <span>jalebi – Rs. 250/kg</span>
+      <input type="number" min="0" value="0" data-name="jalebi" data-price="250/kg" />
+    </div>
+    <div class="item">
+      <img src="image/rasmalai.jpg" alt="rasmalai" class="menu-img"/>
+      <span>rasmalai – Rs.100/pcs</span>
+      <input type="number" min="0" value="0" data-name="rasmalai" data-price="100/pcs" />
+    </div>
+    <div class="item">
+      <img src="image/gulabjamun.jpg" alt="gulab jamun" class="menu-img"/>
+      <span>gulab jamun – Rs.25/pcs</span>
+      <input type="number" min="0" value="0" data-name="gulab jamun" data-price="40" />
+    </div>
+    <div class="item">
+      <img src="image/rasgulla.jpg" alt="rasgullla" class="menu-img"/>
+      <span>rsagulla – Rs. 30</span>
+      <input type="number" min="0" value="0" data-name="rsagulla" data-price="30" />
+    </div>
+    <div class="item">
+      <img src="image/laung latti.jpg" alt="laung lati" class="menu-img"/>
+      <span>laung lati – Rs. 50</span>
+      <input type="number" min="0" value="0" data-name="laung latti" data-price="50" />
+    </div>
+    <div class="item">
+      <img src="image/besanladdu.jpg" alt="Besan ke laddu" class="menu-img"/>
+      <span>Besan Ke laddu – Rs. 600/kg</span>
+      <input type="number" min="0" value="0" data-name="besan ke laddu" data-price="600/kg"/>
+    </div>
+    <div class="item">
+      <img src="image/barfi.jpg" alt="Barfi" class="menu-img"/>
+      <span>Barfi – Rs. 1700/kg</span>
+      <input type="number" min="0" value="0" data-name="Barfi" data-price="1700/kg" />
+    </div>
+    <div class="item">
+      <img src="image/mixmithai.jpg" alt="mix mithai" class="menu-img"/>
+      <span>mix mithai – Rs.1200/kg</span>
+      <input type="number" min="0" value="0" data-name="jmix mithai" data-price="1200/kg" />
+    </div>
+  </div>
+   <!-- Beverages -->
+  <div class="menu-category">
+    <div class="item">
+      <img src="image/tea.jpg" alt="Tea" class="menu-img"/>
+      <span>Tea – Rs. 25</span>
+      <input type="number" min="0" value="0" data-name="Tea" data-price="25" />
+    </div>
+    <div class="item">
+      <img src="image/coffee.jpg" alt="Coffee" class="menu-img"/>
+      <span>Coffee – Rs. 30</span>
+      <input type="number" min="0" value="0" data-name="Coffee" data-price="30" />
+    </div>
+    <div class="item">
+      <img src="image/lassi.jpg" alt="Lassi" class="menu-img"/>
+      <span>Lassi – Rs. 60</span>
+      <input type="number" min="0" value="0" data-name="Lassi" data-price="60" />
+    </div>
+    <div class="item">
+      <img src="image/ac1ec98ed960773e825ac264753c33c4.jpg" alt="coke" class="menu-img"/>
+      <span>coke – Rs. 30</span>
+      <input type="number" min="0" value="0" data-name="coke" data-price="30" />
+    </div>
+    <div class="item">
+      <img src="image/fanta.jpg" alt="Fanta" class="menu-img"/>
+      <span>Fanta – Rs. 30</span>
+      <input type="number" min="0" value="0" data-name="Fanta" data-price="30" />
+    </div>
+    <div class="item">
+      <img src="image/juice.jpg" alt="Juice" class="menu-img"/>
+      <span>Juice – Rs. 70</span>
+      <input type="number" min="0" value="0" data-name="juice" data-price="70" />
+    </div>
+    <div class="item">
+      <img src="image/masala tea.jpg" alt="Masala Tea" class="menu-img"/>
+      <span>Masala Tea – Rs. 50</span>
+      <input type="number" min="0" value="0" data-name="Masala Tea" data-price="50" />
+    </div>
+  </div>
+
+
+  <div id="bill">
+    <h3>Your Order Summary</h3>
+    <div id="orderSummary">No items selected yet.</div>
+    <div id="totalAmount">Total: Rs. 0</div>
+    <div class="payment-buttons">
+      <button id="payCashBtn">Pay by Cash</button>
+      <button id="payOnlineBtn">Pay Online</button>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+<div id="qrModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
+  <div style="background:#fff; padding:20px; border-radius:10px; text-align:center; position:relative;">
+    <img src="image/QR.jpg" alt="eSewa QR" style="max-width:300px; width:90%; height:auto; border: 2px solid #333; border-radius: 10px;" />
+    <p style="margin-top:10px;">Scan to pay Jamuna Sharma  <br>Esewa id 9803441682</p>
+    <button onclick="closeQR()" style="margin-top:10px; padding:8px 16px; background-color:#ff7043; color:white; border:none; border-radius:5px; cursor:pointer;">Close</button>
+  </div>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1903.1725242082687!2d85.92610833586417!3d26.730691805330032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snp!4v1753505023500!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+  <div class="contact">
+    <h3>Contact Us</h3>
+    <p>Phone: +977 982‑2010227</p>
+    <p>Email: petesoncliver@gmail.com</p>
+    <p>Address: dhanusha,nepal, Janakpurdham, Janakichowk</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
